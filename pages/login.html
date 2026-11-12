@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodWise - Entrar</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body data-page="login">
+    <main class="auth-container">
+        <div class="auth-card">
+            <h1>Entrar</h1>
+            <p class="auth-subtitle">Acede à tua conta FoodWise</p>
+
+            <form id="loginForm" class="auth-form">
+                <label for="email">E-mail</label>
+                <input id="email" name="email" type="email" placeholder="exemplo@email.com" required>
+
+                <label for="password">Palavra-passe</label>
+                <input id="password" name="password" type="password" placeholder="••••••••" required>
+
+                <button type="submit" class="btn btn-primary btn-block">Entrar</button>
+                <p class="form-message" aria-live="polite"></p>
+            </form>
+
+            <p class="auth-switch">
+                Ainda não tens conta?
+                <a href="register.html">Criar conta</a>
+            </p>
+        </div>
+    </main>
+
+    <script src="../assets/js/modules/auth.js"></script>
+</body>
+</html>

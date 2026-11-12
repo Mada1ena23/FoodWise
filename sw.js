@@ -1,4 +1,4 @@
-const CACHE_NAME = 'foodwise-cache-v2';
+const CACHE_NAME = 'foodwise-cache-v3';
 const APP_SHELL = [
   './',
   './index.html',
@@ -6,6 +6,11 @@ const APP_SHELL = [
   './assets/css/styles.css',
   './assets/js/app.js',
   './assets/js/db.js',
+  './assets/js/modules/auth.js',
+  './assets/js/modules/family.js',
+  './assets/js/modules/inventory.js',
+  './assets/js/modules/recipes.js',
+  './assets/js/modules/shopping.js',
   './pages/login.html',
   './pages/register.html',
   './pages/setup-family.html',

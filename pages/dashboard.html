@@ -6,13 +6,16 @@
     <title>FoodWise - Menu Principal</title>
     <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
-<body>
+<body data-page="dashboard">
     <header class="app-header">
         <h2>FoodWise - Menu</h2>
-        <a href="login.html" class="btn-logout">Terminar Sessão</a>
+        <div>
+            <span id="userNameDisplay" class="user-welcome">Utilizador</span>
+            <button id="logoutButton" class="btn-logout" type="button">Terminar Sessão</button>
+        </div>
     </header>
 
-    <main class="dashboard-grid">
+    <main class="dashboard-grid" data-page="dashboard">
         <a href="inventory.html" class="card-menu">📦 Inventário</a>
         <a href="alerts.html" class="card-menu">⚠️ Alertas de Validade</a>
         <a href="recipes.html" class="card-menu">🍲 Receitas Inteligentes</a>
