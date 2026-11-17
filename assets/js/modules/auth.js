@@ -38,12 +38,17 @@
     window.location.href = 'dashboard.html';
   }
 
+  function getFieldValue(form, name) {
+    const field = form.elements.namedItem(name);
+    return field instanceof HTMLInputElement ? field.value.trim() : '';
+  }
+
   function handleLogin(event) {
     event.preventDefault();
 
     const form = event.currentTarget;
-    const email = form.email.value.trim();
-    const password = form.password.value.trim();
+    const email = getFieldValue(form, 'email');
+    const password = getFieldValue(form, 'password');
     const message = form.querySelector('.form-message');
 
     if (!email || !password) {
@@ -69,10 +74,10 @@
     event.preventDefault();
 
     const form = event.currentTarget;
-    const name = form.name.value.trim();
-    const email = form.email.value.trim();
-    const password = form.password.value.trim();
-    const passwordConfirm = form.passwordConfirm.value.trim();
+    const name = getFieldValue(form, 'name');
+    const email = getFieldValue(form, 'email');
+    const password = getFieldValue(form, 'password');
+    const passwordConfirm = getFieldValue(form, 'passwordConfirm');
     const message = form.querySelector('.form-message');
 
     if (!name || !email || !password || !passwordConfirm) {
@@ -115,7 +120,9 @@
 
     setCurrentUser({ id: newUser.id, name: newUser.name, email: newUser.email });
     showMessage(message, 'Conta criada com sucesso! A redirecionar...', 'success');
-    setTimeout(redirectToDashboard, 600);
+    setTimeout(() => {
+      window.location.href = 'setup-family.html';
+    }, 600);
   }
 
   function handleLogout(event) {
@@ -141,8 +148,6 @@
     const loginForm = document.getElementById('loginForm');
     const registerForm = document.getElementById('registerForm');
     const logoutButton = document.getElementById('logoutButton');
-    const userNameDisplay = document.getElementById('userNameDisplay');
-
     if (loginForm) {
       loginForm.addEventListener('submit', handleLogin);
     }
@@ -155,9 +160,7 @@
       logoutButton.addEventListener('click', handleLogout);
     }
 
-    if (page === 'dashboard' && currentUser) {
-      userNameDisplay.textContent = currentUser.name;
-    } else if (page === 'dashboard') {
+    if (page === 'dashboard' && !currentUser) {
       window.location.href = 'login.html';
     }
   });

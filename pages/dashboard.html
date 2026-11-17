@@ -1,27 +1,19 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-PT">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#315c46">
     <title>FoodWise - Menu Principal</title>
     <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="manifest" href="../manifest.json">
 </head>
 <body data-page="dashboard">
-    <header class="app-header">
-        <h2>FoodWise - Menu</h2>
-        <div>
-            <span id="userNameDisplay" class="user-welcome">Utilizador</span>
-            <button id="logoutButton" class="btn-logout" type="button">Terminar Sessão</button>
-        </div>
-    </header>
-
-    <main class="dashboard-grid" data-page="dashboard">
-        <a href="inventory.html" class="card-menu">📦 Inventário</a>
-        <a href="alerts.html" class="card-menu">⚠️ Alertas de Validade</a>
-        <a href="recipes.html" class="card-menu">🍲 Receitas Inteligentes</a>
-        <a href="meal-plan.html" class="card-menu">📅 Planeamento de Refeições</a>
-        <a href="shopping-list.html" class="card-menu">🛒 Lista de Compras</a>
-        <a href="family-management.html" class="card-menu">👨‍👩‍👧‍👦 Gestão Familiar</a>
-    </main>
+    <script src="../assets/js/db.js"></script>
+    <script src="../assets/js/modules/family.js"></script>
+    <script src="../assets/js/modules/inventory.js"></script>
+    <script src="../assets/js/modules/recipes.js"></script>
+    <script src="../assets/js/modules/shopping.js"></script>
+    <script src="../assets/js/app.js"></script>
 </body>
 </html>
