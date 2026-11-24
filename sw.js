@@ -1,4 +1,4 @@
-const CACHE_NAME = 'foodwise-cache-v5';
+const CACHE_NAME = 'foodwise-cache-v7';
 const APP_SHELL = [
   './',
   './index.html',
